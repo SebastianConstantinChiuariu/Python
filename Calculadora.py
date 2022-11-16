@@ -1,41 +1,47 @@
+from os import system
+system('cls')
+from time import sleep
+
 #Definició de funcions auxiliar
 #Funció del menú  principal
 def menu_principal():
-        print("\n           Calculadora\n")
+        system('cls')
+        print("\n           Calculadora_\n")
         print("               Menú")
         print("""
         1. Números Enters 
         2. Numeros reals
         3. Canvis de base 
-        0. Sortir
+        0. Aturar Calculadora
         """)
-        opcio = input ("Selecciona la primera opció que vulguis: ")
+        opcio = input ("  Selecciona l'opció que vulguis: ")
         return opcio
 
 # Funció Menú nombres Enters
 def menu_enters():
+    system('cls')
     print("""
     Calculadora de nombres enters\n
-            1.Sumar
-            2.Restar
-            3.Dividir
-            4.Multiplicar
-            5.Potència
-            6.Mòdul
+            1. Sumar
+            2. Restar
+            3. Dividir
+            4. Multiplicar
+            5. Potència
+            6. Mòdul
             0. Sortir\n""")
-    opcio= input("Selecciona l'opció que vulguis: ")
+    opcio= input("  Selecciona l'opció que vulguis: ")
     return opcio
 
 # Funció Menú nombres Reals
 def menu_reals():
     print("""
-        Calculadora de nombres enters
-        1.Sumar
-        2.Restar
-        3.Dividir
-        4.Multiplicar
+        Calculadora de nombres reals
+        1. Sumar
+        2. Restar
+        3. Dividir
+        4. Multiplicar
         0. Sortir""")
-    opcio= input("Selecciona l'opció que vulguis: ")
+    opcio= input("  Selecciona l'opció que vulguis: ")
     return opcio
 
 #Funció Canvis de Base Menú
@@ -43,13 +49,13 @@ def menu_reals():
 def menu_canvis_de_base():
 
     print("""
-        Calculadora de nombres enters
-        1.Sumar
-        2.Restar
-        3.Dividir
-        4.Multiplicar
+        Calculadora de canvis de base
+        1. Sumar
+        2. Restar
+        3. Dividir
+        4. Multiplicar
         0. Sortir""")
-    opcio= input("Selecciona l'opció que vulguis: ")
+    opcio= input("  Selecciona l'opció que vulguis: ")
     return opcio
 
 #Funcions decimal_a_octal
@@ -72,11 +78,6 @@ def decimal_a_binario(decimal):
         binario = str(residuo) + binario
     return binario
 
-decimal = int(input("Ingresa un número decimal: "))
-binario = decimal_a_binario(decimal)
-print(f"El número {decimal} es {binario} en binario")
-
-
 #Funció decimal_a_hexadecimal
 def decimal_a_hexadecimal(decimal):
     hexadecimal = ""
@@ -93,8 +94,165 @@ opcio=1
 while(opcio!=0):
     opcio=menu_principal()
     match opcio:
+
+        case "":
+            print("Opció inexistent")
+            sleep(1)
+
+        case "0":
+            system('cls')
+            sleep(1)
+            print("\n     Mode Suspensió")
+            sleep(2)
+            iniciar=input("\nPitjar ENTER per iniciar: ")
+            opcio=1
         case "1":
             opcio2=menu_enters()
-            a = int(input("Indiqui el primer operand: "))
-            b = int(input("Insereix un segon opreand"))
+            system('cls')
+            match opcio2:
+                case "1":
+                    operació=1
+                    while(operació!=0):
+                        system('cls')
+                        print("\n            Sumant")
+                        a = int(input("\n  Indiqui el primer operand: "))
+                        b = int(input("\n  Insereix un segon opreand: "))
+                        c=a+b
+                        print("\n       ",a," + ",b," = ",c,"")
+                        sleep(2)
+                    
+                        #Repetir operació?
+                        
+                        print("\n""          1. Repetir")
+                        print("          0. Sortir")
+                        repetir = input("\n""Selecciona l'opció que vulguis: ")
+                        if repetir == "1":
+                            
+                            operació=1
+                                    
+                        if repetir == "0":
+                            opcio=1
 
+                case "2":
+                    operació=1
+                    while(operació!=0):
+                        system('cls')
+                        print("\n            Restant")
+                        a = int(input("\n  Indiqui el primer operand: "))
+                        b = int(input("\n  Insereix un segon opreand: "))
+                        c=a-b
+                        print("\n       ",a," - ",b," = ",c,"")
+                        sleep(2)
+                    
+                        #Repetir operació?
+                        
+                        print("\n""          1. Repetir")
+                        print("          0. Sortir")
+                        repetir = input("\n""Selecciona l'opció que vulguis: ")
+                        if repetir == "1":
+                            operació=1
+                                    
+                        if repetir == "0":
+                            opcio=menu_principal()
+
+                case "3":
+                    operació=1
+                    while(operació!=0):
+                        system('cls')
+                        print("\n         Multiplicant")
+                        a = int(input("\n  Indiqui el primer operand: "))
+                        b = int(input("\n  Insereix un segon opreand: "))
+                        c=a*b
+                        print("\n       ",a," x ",b," = ",c,"")
+                        sleep(2)
+                    
+                        #Repetir operació?
+                        
+                        print("\n""          1. Repetir")
+                        print("          0. Sortir")
+                        repetir = input("\n""Selecciona l'opció que vulguis: ")
+                        if repetir == "1":
+                            operació=1
+                                    
+                        if repetir == "0":
+                            opcio=menu_principal()
+
+                case "4":
+                    operació=1
+                    while(operació!=0):
+                        system('cls')
+                        print("\n           Dividint")
+                        a = int(input("\n  Indiqui el primer operand: "))
+                        b = int(input("\n  Insereix un segon opreand: "))
+                        c=a/b
+                        print("\n       ",a," ÷ ",b," = ",c,"")
+                        sleep(2)
+                    
+                        #Repetir operació?
+                        
+                        print("\n""          1. Repetir")
+                        print("          0. Sortir")
+                        repetir = input("\n""Selecciona l'opció que vulguis: ")
+                        if repetir == "1":
+                            operació=1
+                                    
+                        if repetir == "0":
+                            opcio=menu_principal()
+
+                case "5":
+                    operació=1
+                    while(operació!=0):
+                        system('cls')
+                        print("\n         Potenciant")
+                        a = int(input("\n  Indiqui el primer operand: "))
+                        b = int(input("\n  Insereix un segon opreand: "))
+                        c=a**b
+                        print("\n       ",a," ** ",b," = ",c,"")
+                        sleep(2)
+                    
+                        #Repetir operació?
+                        
+                        print("\n""         1. Repetir")
+                        print("         0. Sortir")
+                        repetir = input("\n""Selecciona l'opció que vulguis: ")
+                        if repetir == "1":
+                            operació=1
+                                    
+                        if repetir == "0":
+                            opcio=menu_principal()
+
+                case "6":
+                    operació=1
+                    while(operació!=0):
+                        system('cls')
+                        print("\n           Modul")
+                        a = int(input("\n  Indiqui el primer operand: "))
+                        b = int(input("\n  Insereix un segon opreand: "))
+                        c=a**b
+                        print("\n       ",a," ** ",b," = ",c,"")
+                        sleep(2)
+                    
+                        #Repetir operació?
+                        
+                        print("\n""         1. Repetir")
+                        print("         0. Sortir")
+                        repetir = input("\n""Selecciona l'opció que vulguis: ")
+                        if repetir == "1":
+                            operació=1
+                                    
+                        if repetir == "0":
+                            opcio=menu_principal()
+
+                case "0":
+                    opcio=1
+
+                case " ":
+                    print("Opció inexistent")
+                    sleep(1)
+                    
+        case "2":
+            opcio3=menu_reals
+
+
+        case "3":
+            opcio4=menu_canvis_de_base
