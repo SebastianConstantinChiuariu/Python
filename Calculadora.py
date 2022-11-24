@@ -50,10 +50,9 @@ def menu_canvis_de_base():
 
     print("""
         Calculadora de canvis de base
-        1. Sumar
-        2. Restar
-        3. Dividir
-        4. Multiplicar
+        1. Decimal a Binari
+        2. Decimal a Octal
+        3. Decimal a Hexadecimal
         0. Sortir""")
     opcio= input("  Selecciona l'opció que vulguis: ")
     return opcio
@@ -110,7 +109,11 @@ while(opcio!=0):
             opcio2=menu_enters()
             system('cls')
             match opcio2:
+
+                case "other":
+                    print("         Opció Inexistent")
                 case "1":
+                    system('cls')
                     operació=1
                     while(operació!=0):
                         system('cls')
@@ -246,13 +249,31 @@ while(opcio!=0):
                 case "0":
                     opcio=1
 
-                case " ":
-                    print("Opció inexistent")
-                    sleep(1)
+                
                     
         case "2":
-            opcio3=menu_reals
-
-
-        case "3":
-            opcio4=menu_canvis_de_base
+            opcio3=menu_reals()
+            match opcio3:
+                case "1":
+                    operació=1
+                    while(operació!=0):
+                        system('cls')
+                        print("\n            Sumant")
+                        a = int(input("\n  Indiqui el primer operand: "))
+                        b = int(input("\n  Insereix un segon opreand: "))
+                        while(a):
+                            c=a+b
+                        print("\n       ",a," + ",b," = ",c,"")
+                        sleep(2)
+                    
+                        #Repetir operació?
+                        
+                        print("\n""          1. Repetir")
+                        print("          0. Sortir")
+                        repetir = input("\n""Selecciona l'opció que vulguis: ")
+                        if repetir == "1":
+                            
+                            operació=1
+                                    
+                        if repetir == "0":
+                            opcio3=menu_principal()
