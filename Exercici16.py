@@ -7,12 +7,10 @@ system('clear')
 print("\n           Inversor de textos")
 
 def invertir (text):
-    caracters = "aba"
+    inversa = ""
+    for x in invertir:
+     
 
-    for i in caracters in text [-999] - [0]:
-        return text 
-
-    print(invertir(text))
-
+print(invertir(text))
 caracters = input("\n\nEscriu el text: ")
 print(invertir())

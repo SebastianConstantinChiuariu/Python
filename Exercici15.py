@@ -7,27 +7,33 @@ from time import sleep
 #Menú
 
 llista_menu = ["Suma de numeros","Multiplicació de numeros"]
-print("\n             Menú")
+print("\n               Menú")
 print("________________________________")
-print ("\n           1.Sumar")
-print("           2.Restar")
+print ("\n             1.Sumar")
+print("             2.Restar")
 print("________________________________")
-opcio = input("\n            Opció: ")
-
+opcio = input("\n              Opció: ")
 
 # Funcions
 
 if opcio == "1":
-    
-    system('clear')
-    def sumar_llista():
+    def sumar(numeros):
+        suma = 0
+        for x in numeros:
+            suma += x
+        return suma
 
-        numeros = "1,2,3,4,5"
-        digits = 0
-        
-        resultat = int(digits) + int(numeros) 
-        print(" la suma total és: ",resultat)
+    numeros = [1,2,3,4,5]
+    print("\n           Resultat =",(sumar(numeros)))
 
-    print("\n",llista_menu[0])
-    print(sumar_llista())
+if opcio == "2":
+    def multiplicar(numeros):
+        multiplicar = 1
+        for x in numeros:
+            multiplicar *= x
+        return multiplicar
+
+    numeros = [1,3,5,10]   
+    print("\n           Resultat =",(multiplicar(numeros)))
+
     
