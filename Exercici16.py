@@ -4,13 +4,21 @@ system('clear')
 
 #menú principal
 
-print("\n           Inversor de textos")
+print("\nInversor de textos")
+repetició = 1
+while (repetició!=0):
+    def invertir (a):
 
-def invertir (text):
-    inversa = ""
-    for x in invertir:
-     
+        invert = list(a)
+        b = a[::-1]
+        c = str(b)
+        return c
+        
+        
+    
+    l = input("\nText per invertir: ")
+    print("\nText Invertit: ",invertir(l))
+    
 
-print(invertir(text))
-caracters = input("\n\nEscriu el text: ")
-print(invertir())
+#Repetir
+
