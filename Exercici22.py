@@ -1,0 +1,54 @@
+from os import system
+from time import sleep
+
+#Menú
+prog = 1
+while (prog!=0):
+    print("\n             Clasificador  de nombres")
+    print(" \n\n                      0. |<|")
+    print("                      1. |>|")       
+
+#Programa
+
+    inici = input("\n                      Opció: ")
+    match inici:
+        case "0":
+            
+            system ('clear')
+
+            def men_maj(numeros):
+                numeros = list(xifres)
+                numeros.sort(reverse=False)
+                return numeros
+
+            xifres =input("Insereix les xifres: ")
+
+            print(men_maj(xifres))
+
+
+
+        case "1":
+
+            system("clear")
+            
+            def maj_men(numeros):
+                numeros = list(xifres)
+                numeros.sort(reverse=True)
+                return numeros
+
+            xifres =input("Insereix les xifres: ")
+
+            print(maj_men(xifres))
+
+
+
+        case _:
+            sleep(0.5)
+            system('clear')
+            espais = "\n\n\n\n\n\n"
+            print(espais,"                 Opció Inexistent")
+            sleep(2)
+            system('clear')
+            prog = 1
+
+   
