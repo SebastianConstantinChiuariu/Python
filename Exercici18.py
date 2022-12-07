@@ -1,5 +1,4 @@
 from  os import system
-system('clear')
 from time import sleep
 
 #Menú Principal
@@ -8,19 +7,21 @@ print(" El programa cercara caracters repetits als textos")
 a = input ("\nPrimer text: ")
 b = input ("\nSegon text: ")
 
-def superposicio(text):
+def superposicio(a,b):
+        x = 0
+        for i in a:
+                x += b.count(i)
+        if n>0
+                return 
+
         x = list (a)
         z = list (b)
+        for i in x,z:
+        x != z
+        print("Si") 
         
-        
-        if x != z:
-            print("Si")
-        else:
-            print("no")
 
-        return
+        return x,z
             
-
-        
 
 print(superposicio(a and b))

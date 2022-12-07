@@ -6,16 +6,24 @@ prog = 1
 while (prog!=0):
     print("\n                 Dibuix amb Punts")
     print("\n\n      Nombre Introduit = Punts a la pantalla")
-    punts = input("\n\nNombre: ")
-    def crear_punts(punt):
-        x = "."
-        a = str(punts)
-        b = int(a) + x
-        return b
+    y = input("\n\nNombre: ")
+
+    def repetits (a,b):
+        c = b*int(a)
+        return c
+
+    def crear_punts(a):
+        for i in a:
+            a = repetits(int(i),".")
+            print(a)
+
+    crear_punts(y)
+
+
+    
 
         
 
-    print(crear_punts(punts))
 
 
           

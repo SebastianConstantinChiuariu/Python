@@ -8,17 +8,14 @@ print("\nInsereix el caracter i el digit per multpilicar-lo")
 sleep(3)
 
 
-def multplicador(x):
-    a = list(x)
-    b = str(a)
-    for i in b :
-        resultat = int (i*i)
-    return resultat
+def multplicador(x,y):
+    z = x * int(y)
+    return z
     
     
 x = input("\n\nCaracter: ")
-print(multplicador(x))
-
+y = input("Nombre:")
+print("\nResultat del mulyiplicador: ", multplicador(x,y))
 
 
 
