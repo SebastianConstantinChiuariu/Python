@@ -14,7 +14,7 @@ while (prog!=0):
     match inici:
         case "0":
             
-            system ('cls')
+            system ('clear')
 
             def men_maj(numeros):
                 numeros = list(xifres)
@@ -29,7 +29,7 @@ while (prog!=0):
 
         case "1":
 
-            system("cls")
+            system("clear")
             
             def maj_men(numeros):
                 numeros = list(xifres)
@@ -44,11 +44,11 @@ while (prog!=0):
 
         case _:
             sleep(0.5)
-            system('cls')
+            system('clear')
             espais = "\n\n\n\n\n\n"
             print(espais,"                 Opció Inexistent")
             sleep(2)
-            system('cls')
+            system('clear')
             prog = 1
 
    

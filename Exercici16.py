@@ -18,6 +18,7 @@ while (repetició!=0):
     
     l = input("\nText per invertir: ")
     print("\nText Invertit: ",invertir(l))
+    sleep(1)
     
 
 #Repetir
